@@ -11,7 +11,7 @@ pyautogui.press('win') # Pressiona a tecla do windows
 pyautogui.write('edge') # Busca pelo navegador
 pyautogui.press('enter') # Pressiona ENTER ao encontrar o navegador
 
-pyautogui.click(x=433, y=65)
+pyautogui.click(x=433, y=65) # Clique na barra de navegação
 # Link do "Site"
 pyautogui.write('https://dlp.hashtagtreinamentos.com/python/intensivao/login')
 pyautogui.press('enter')
@@ -44,3 +44,22 @@ with open(CAMINHO_CSV, 'r', encoding='utf8') as arquivo:
         pyautogui.press("enter") # cadastra o produto (botao enviar)
         time.sleep(2)
         pyautogui.scroll(5000) # dar scroll de tudo pra cima
+
+# +++++++++++ Solução com Biblioteca "pandas" +++++++++++
+# import pandas as pd
+
+# tabela = pd.read_csv("produtos.csv")
+
+# print(tabela)
+
+# for linha in tabela.index:
+#     pyautogui.click(x=653, y=294)
+    
+#     # Repete o bloco para cada campo
+#     codigo = tabela.loc[linha, "codigo"]
+#     pyautogui.write(str(codigo))
+    
+#     # Campo "obs" nulo:
+#     obs = tabela.loc[linha, "obs"]
+#     if not pd.isna(obs):
+#         pyautogui.write(str(tabela.loc[linha, "obs"]))
